@@ -1,22 +1,21 @@
-# 🖥️ React.js Base Project
+# 🖥️ Thirty Days Of CSS
 
 <h1 align="center">
   <img src=".github/logo.png" width="200px" />
 </h1>
 
 ## 🔎️ Description
-React.js base application with default configurations to be used as a faster start for new projects. This base was created by using create-react-app.
+Thirty days of CSS is a challenge that aims to help you improve your coding skills by doing mini daily projects using HTML5 and CSS3. In my case, I have decied to create a React.js application to serve as a base to all the challanges.
 
-## 👀️ Settings made in this base project:
+## 👀️ Rules:
 
-- .editorconfig
-- ESLint
-- Prettier
-- Folders structure
-- React Router Dom
+- Finish one challenge a day.
+- Share your progress on social media (Twitter, Facebook, Linkedin etc.) using the hashtag #30DaysOfCSS
 
 ## 🚀️ Technologies
 
+- HTML5
+- CSS3
 - React.js
 - TypeScript
 
