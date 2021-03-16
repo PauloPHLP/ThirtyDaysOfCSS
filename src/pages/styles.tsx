@@ -29,7 +29,18 @@ export const Social = styled.div`
 `;
 
 export const SocialLink = styled.a`
+  font-size: 20px;
+  text-decoration: none;
   margin: 0 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:visited {
+    color: #ffffff;
+    text-decoration: none;
+  }
 `;
 
 export const Header = styled.header`
