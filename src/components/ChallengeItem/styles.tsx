@@ -15,7 +15,7 @@ export const Container = styled.div<StatusProps>`
   align-content: center;
   justify-content: space-evenly;
   background-color: #4a5079;
-  border: 1px solid #6fd0cf;
+  border: 3px solid #6fd0cf;
   border-radius: 8px;
 
   &:hover {
