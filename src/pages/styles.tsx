@@ -20,7 +20,7 @@ export const Square = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  border: 1px solid #8ee4af;
+  border: 1px solid #4a5079;
   border-radius: 8px;
 `;
 
@@ -33,22 +33,24 @@ export const SocialLink = styled.a`
   text-decoration: none;
   margin: 0 5px;
 
-  &:hover {
-    cursor: pointer;
+  &:visited {
+    color: #989db8;
+    text-decoration: none;
   }
 
-  &:visited {
-    color: #ffffff;
-    text-decoration: none;
+  &:hover {
+    color: #6fd0cf;
+    cursor: pointer;
   }
 `;
 
 export const Header = styled.header`
   font-size: 48px;
-  color: #e34830;
+  color: #ffffff;
   font-weight: 500;
 `;
 
 export const Description = styled.p`
   margin-top: 1rem;
+  color: #989db8;
 `;

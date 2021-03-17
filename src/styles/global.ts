@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-import background from '../assets/images/background.jpg';
-
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -14,11 +12,7 @@ export default createGlobalStyle`
     background: #161616;
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
-    background-image: url(${background});
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: #0F1228;
   }
 
   body, input, button {
