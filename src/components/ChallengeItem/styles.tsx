@@ -17,10 +17,11 @@ export const Container = styled.div<StatusProps>`
   background-color: #4a5079;
   border: 3px solid #6fd0cf;
   border-radius: 8px;
+  opacity: ${props => (props.status ? 1 : 0.5)};
 
   &:hover {
-    cursor: pointer;
-    border: 3px solid #a592f2;
+    cursor: ${props => (props.status ? 'pointer' : 'not-allowed')};
+    border: ${props => props.status && '3px solid #a592f2'};
   }
 `;
 

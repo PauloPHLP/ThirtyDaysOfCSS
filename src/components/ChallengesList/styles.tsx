@@ -5,7 +5,7 @@ export const Container = styled.div`
   border-bottom: none;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  height: 70%;
+  height: 75%;
   width: 90%;
   bottom: 0;
   margin-bottom: 1.1rem;
@@ -17,7 +17,23 @@ export const Container = styled.div`
   justify-content: center;
   overflow: auto;
 
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 410px) {
     height: 55%;
+  }
+
+  @media (min-width: 411px) and (max-width: 420px) {
+    height: 60%;
+  }
+
+  @media (max-width: 510px) {
+    height: 70%;
+  }
+
+  @media (min-width: 511px) and (max-width: 550px) {
+    height: 70%;
+  }
+
+  @media (min-width: 1280px) {
+    height: 70%;
   }
 `;
