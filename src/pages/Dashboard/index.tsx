@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithub, FaTerminal } from 'react-icons/fa';
 
-import ChallengesList from '../components/ChallengesList';
+import ChallengesList from '../../components/ChallengesList';
 import * as S from './styles';
 
 const Dashboard: React.FC = () => {
