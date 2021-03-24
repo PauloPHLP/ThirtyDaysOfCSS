@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface ILinkButton {
+  isDisabled: boolean;
+}
 
 export const Container = styled.div`
   height: 90vh;
@@ -24,12 +28,15 @@ export const Header = styled.div`
   align-content: center;
   justify-content: center;
   max-width: 90%;
+  height: 100%;
 `;
 
 export const GoToChallengesList = styled.div`
   position: fixed;
   top: 0;
+  left: 0;
   margin-top: 2rem;
+  margin-left: 5%;
   display: flex;
   flex: 1;
   flex-direction: row;
@@ -39,40 +46,65 @@ export const GoToChallengesList = styled.div`
   max-width: 90%;
   text-align: center;
   color: #989db8;
-
-  @media (max-width: 260px) {
-    flex-direction: column;
-
-    & > a {
-      display: none;
-    }
-  }
+  font-size: 30px;
 
   &:hover {
     color: #6fd0cf;
     cursor: pointer;
   }
 
-  & > a {
-    font-size: 30px;
-    text-decoration: none;
+  @media (max-width: 260px), (max-width: 1000px) {
+    flex-direction: column;
+    margin-top: 2.6rem;
 
-    &:visited {
-      color: #989db8;
-      text-decoration: none;
-    }
-
-    &:hover {
-      color: #6fd0cf;
-      cursor: pointer;
+    & > p {
+      display: none;
     }
   }
 `;
 
+export const ArrowButtons = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  margin-top: 2.5rem;
+  font-size: 20px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+`;
+
+const LinkButton = styled.div<ILinkButton>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  opacity: ${props => (props.isDisabled ? 0.5 : 1)};
+  user-select: none;
+
+  &:hover {
+    color: ${props => !props.isDisabled && '#6fd0cf'};
+    cursor: ${props => (props.isDisabled ? 'not-allowed' : 'pointer')};
+  }
+`;
+
+export const BackButton = styled(LinkButton)`
+  margin-right: 8px;
+`;
+
+export const NextButton = styled(LinkButton)`
+  margin-left: 8px;
+`;
+
 export const Square = styled.div`
   align-self: center;
-  height: 90%;
-  max-height: 90%;
+  height: 95%;
+  max-height: 95%;
   width: 90%;
   max-width: 90%;
   border: 3px solid #6fd0cf;
@@ -87,9 +119,24 @@ export const Square = styled.div`
   @media (max-width: 1200px) {
     flex-direction: column;
   }
+
+  @media (max-width: 1100px) {
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 6%;
+    margin-bottom: 4%;
+  }
+
+  @media (max-width: 700px) and (max-height: 850px) {
+    margin-top: 15%;
+    margin-bottom: 4%;
+  }
 `;
 
-const squareItems = styled.div`
+const SquareItems = styled.div`
   height: 100%;
   width: 50%;
   display: flex;
@@ -104,7 +151,7 @@ const squareItems = styled.div`
   }
 `;
 
-export const Challenge = styled(squareItems)`
+export const Challenge = styled(SquareItems)`
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   border-right: 3px solid #6fd0cf;
@@ -118,7 +165,7 @@ export const Challenge = styled(squareItems)`
   }
 `;
 
-export const Code = styled(squareItems)`
+export const Code = styled(SquareItems)`
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 
