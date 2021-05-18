@@ -101,6 +101,10 @@ export const NextButton = styled(LinkButton)`
   margin-left: 8px;
 `;
 
+export const LoadingFallBack = styled.div`
+  font-size: 0;
+`;
+
 export const Square = styled.div`
   align-self: center;
   height: 95%;

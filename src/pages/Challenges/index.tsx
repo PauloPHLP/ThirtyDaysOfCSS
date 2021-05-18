@@ -1,27 +1,52 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { Suspense, useCallback, useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 
 import * as S from './styles';
 
+function loadChallenge(
+  challengeDay: string,
+  type: 'Challenge' | 'Code',
+): React.ElementType {
+  const Component = React.lazy(() =>
+    import(`../../components/Challenges/Day${challengeDay}/${type}`).catch(() =>
+      import(`../../components/Challenges/Day01/${type}`),
+    ),
+  );
+
+  return Component;
+}
+
 const Challenges: React.FC = () => {
   const [newRoute, setNewRoute] = useState('');
-  const [currentDay, setCurrentDay] = useState('');
   const [previousDay, setPreviousDay] = useState('');
   const [nextDay, setNextDay] = useState('');
+  const [CurrentChallenge, setCurrentChallenge] = useState<React.ElementType>(
+    () => {
+      return loadChallenge('01', 'Challenge');
+    },
+  );
+  const [CurrentCode, setCurrentCode] = useState<React.ElementType>(() => {
+    return loadChallenge('01', 'Code');
+  });
   const history = useHistory();
 
-  const handleDays = useCallback(() => {
-    const current = history?.location?.pathname.split('/challenges/')[1];
-    const dayNumber = Number(current.split('day-')[1]);
-    const next = dayNumber + 1 < 10 ? `0${dayNumber + 1}` : `${dayNumber + 1}`;
-    const previous =
-      dayNumber - 1 < 10 ? `0${dayNumber - 1}` : `${dayNumber - 1}`;
+  const zeroPad = useCallback(number => {
+    return String(number).padStart(2, '0');
+  }, []);
 
-    setCurrentDay(`Day${dayNumber < 10 ? `0${dayNumber}` : `${dayNumber}`}`);
-    setNextDay(`day-${next}`);
-    setPreviousDay(`day-${previous}`);
-  }, [history]);
+  const handleDays = useCallback(() => {
+    // Getting the current day based on the URI.
+    const currentDayNumber = history?.location?.pathname
+      .split('/challenges/')[1]
+      .split('day-')[1];
+
+    setNextDay(zeroPad(Number(currentDayNumber) + 1));
+    setPreviousDay(zeroPad(Number(currentDayNumber) - 1));
+
+    setCurrentChallenge(loadChallenge(currentDayNumber, 'Challenge'));
+    setCurrentCode(loadChallenge(currentDayNumber, 'Code'));
+  }, [history, zeroPad]);
 
   const handleRouteChange = useCallback(
     (path: string) => {
@@ -48,8 +73,8 @@ const Challenges: React.FC = () => {
         <S.ArrowButtons>
           <S.BackButton
             onClick={() =>
-              previousDay !== 'day-00' && handleRouteChange(previousDay)}
-            isDisabled={previousDay === 'day-00'}
+              previousDay !== '00' && handleRouteChange(`day-${previousDay}`)}
+            isDisabled={previousDay === '00'}
           >
             <FaArrowLeft
               size={16}
@@ -59,8 +84,9 @@ const Challenges: React.FC = () => {
           </S.BackButton>
           &bull;
           <S.NextButton
-            onClick={() => nextDay !== 'day-31' && handleRouteChange(nextDay)}
-            isDisabled={nextDay === 'day-31'}
+            onClick={() =>
+              nextDay !== '31' && handleRouteChange(`day-${nextDay}`)}
+            isDisabled={nextDay === '31'}
           >
             <p>Next challenge</p>
             <FaArrowRight
@@ -70,10 +96,16 @@ const Challenges: React.FC = () => {
           </S.NextButton>
         </S.ArrowButtons>
       </S.Header>
-      <S.Square>
-        <S.Challenge>buildComponent</S.Challenge>
-        <S.Code>Code</S.Code>
-      </S.Square>
+      <Suspense fallback={<S.LoadingFallBack>Loading...</S.LoadingFallBack>}>
+        <S.Square>
+          <S.Challenge>
+            <CurrentChallenge />
+          </S.Challenge>
+          <S.Code>
+            <CurrentCode />
+          </S.Code>
+        </S.Square>
+      </Suspense>
     </S.Container>
   );
 };
