@@ -10,6 +10,7 @@ function loadChallenge(
 ): React.ElementType {
   const Component = React.lazy(() =>
     import(`../../components/Challenges/Day${challengeDay}/${type}`).catch(() =>
+      // Change to NotCompletedChallengeComponent.
       import(`../../components/Challenges/Day01/${type}`),
     ),
   );
@@ -73,7 +74,8 @@ const Challenges: React.FC = () => {
         <S.ArrowButtons>
           <S.BackButton
             onClick={() =>
-              previousDay !== '00' && handleRouteChange(`day-${previousDay}`)}
+              previousDay !== '00' && handleRouteChange(`day-${previousDay}`)
+            }
             isDisabled={previousDay === '00'}
           >
             <FaArrowLeft
@@ -85,7 +87,8 @@ const Challenges: React.FC = () => {
           &bull;
           <S.NextButton
             onClick={() =>
-              nextDay !== '31' && handleRouteChange(`day-${nextDay}`)}
+              nextDay !== '31' && handleRouteChange(`day-${nextDay}`)
+            }
             isDisabled={nextDay === '31'}
           >
             <p>Next challenge</p>
