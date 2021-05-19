@@ -16,7 +16,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font-family: 'Ubuntu', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 16px;
   }
 
