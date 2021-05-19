@@ -30,6 +30,7 @@ const Challenges: React.FC = () => {
   const [CurrentCode, setCurrentCode] = useState<React.ElementType>(() => {
     return loadChallenge('01', 'Code');
   });
+
   const history = useHistory();
 
   const zeroPad = useCallback(number => {
@@ -74,8 +75,7 @@ const Challenges: React.FC = () => {
         <S.ArrowButtons>
           <S.BackButton
             onClick={() =>
-              previousDay !== '00' && handleRouteChange(`day-${previousDay}`)
-            }
+              previousDay !== '00' && handleRouteChange(`day-${previousDay}`)}
             isDisabled={previousDay === '00'}
           >
             <FaArrowLeft
@@ -87,8 +87,7 @@ const Challenges: React.FC = () => {
           &bull;
           <S.NextButton
             onClick={() =>
-              nextDay !== '31' && handleRouteChange(`day-${nextDay}`)
-            }
+              nextDay !== '31' && handleRouteChange(`day-${nextDay}`)}
             isDisabled={nextDay === '31'}
           >
             <p>Next challenge</p>
@@ -99,7 +98,7 @@ const Challenges: React.FC = () => {
           </S.NextButton>
         </S.ArrowButtons>
       </S.Header>
-      <Suspense fallback={<S.LoadingFallBack>Loading...</S.LoadingFallBack>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <S.Square>
           <S.Challenge>
             <CurrentChallenge />
