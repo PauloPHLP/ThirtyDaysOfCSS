@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 interface ILinkButton {
   isDisabled: boolean;
@@ -63,6 +63,18 @@ export const GoToChallengesList = styled.div`
   }
 `;
 
+export const ChallengeDetails = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2.2rem;
+  margin-right: 5%;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  font-size: 25px;
+`;
+
 export const ArrowButtons = styled.div`
   display: flex;
   flex: 1;
@@ -71,8 +83,8 @@ export const ArrowButtons = styled.div`
   align-content: center;
   justify-content: center;
   position: fixed;
-  top: 0;
-  margin-top: 2.5rem;
+  bottom: 0;
+  margin-bottom: 1.8rem;
   font-size: 20px;
 
   @media (max-width: 1100px) {
@@ -119,6 +131,8 @@ export const Square = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
+  padding: 1rem;
+  margin-bottom: 5rem;
 
   @media (max-width: 1200px) {
     flex-direction: column;
