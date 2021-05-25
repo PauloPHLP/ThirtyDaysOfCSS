@@ -26,6 +26,12 @@ export const Square = styled.div`
 
 export const Social = styled.div`
   margin-bottom: 1rem;
+
+  @media (max-width: 320px) {
+    display: flex;
+    align-items: center;
+    margin-top: -1rem;
+  }
 `;
 
 export const SocialLink = styled.a`
@@ -48,9 +54,30 @@ export const Header = styled.header`
   font-size: 48px;
   color: #ffffff;
   font-weight: 500;
+
+  @media (max-width: 528px) {
+    font-size: 44px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 280px) {
+    font-size: 20px;
+  }
 `;
 
 export const Description = styled.p`
   margin-top: 1rem;
   color: #989db8;
+  font-size: 16px;
+
+  @media (max-width: 280px) {
+    font-size: 14px;
+  }
 `;

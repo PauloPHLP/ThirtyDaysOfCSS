@@ -73,6 +73,10 @@ export const ChallengeDetails = styled.div`
   flex: 1;
   flex-direction: row;
   font-size: 25px;
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;
 
 export const ArrowButtons = styled.div`
@@ -86,10 +90,6 @@ export const ArrowButtons = styled.div`
   bottom: 0;
   margin-bottom: 1.8rem;
   font-size: 20px;
-
-  @media (max-width: 1100px) {
-    flex-direction: column;
-  }
 `;
 
 const LinkButton = styled.div<ILinkButton>`
@@ -136,21 +136,6 @@ export const Square = styled.div`
 
   @media (max-width: 1200px) {
     flex-direction: column;
-  }
-
-  @media (max-width: 1100px) {
-    margin-top: 4%;
-    margin-bottom: 4%;
-  }
-
-  @media (max-width: 800px) {
-    margin-top: 6%;
-    margin-bottom: 4%;
-  }
-
-  @media (max-width: 700px) and (max-height: 850px) {
-    margin-top: 15%;
-    margin-bottom: 4%;
   }
 `;
 

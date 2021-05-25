@@ -17,23 +17,29 @@ export const Container = styled.div`
   justify-content: center;
   overflow: auto;
 
-  @media (max-width: 410px) {
-    height: 55%;
+  @media (max-width: 280px) {
+    height: 65%;
+    width: 87%;
   }
 
-  @media (min-width: 411px) and (max-width: 420px) {
-    height: 60%;
+  @media (min-width: 281px) and (max-width: 320px) {
+    height: 58%;
+    width: 89%;
   }
 
-  @media (max-width: 510px) {
-    height: 70%;
+  @media (min-width: 321px) and (max-width: 370px) {
+    height: 65%;
   }
 
-  @media (min-width: 511px) and (max-width: 550px) {
-    height: 70%;
+  @media (min-width: 371px) and (max-width: 374px) {
+    height: 73%;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 375px) and (max-width: 410px) {
+    height: 68%;
+  }
+
+  @media (min-width: 411px) and (max-width: 449px) {
     height: 70%;
   }
 `;
