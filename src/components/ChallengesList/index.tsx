@@ -9,7 +9,7 @@ const ChallengesList: React.FC = () => {
     <S.Container>
       {challengesList?.length &&
         challengesList.map(challenge => (
-          <ChallengeItem challenge={challenge} />
+          <ChallengeItem key={challenge.link} challenge={challenge} />
         ))}
     </S.Container>
   );
