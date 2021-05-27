@@ -93,50 +93,35 @@ const Challenges: React.FC = () => {
   return (
     <S.Container>
       <S.Header>
-        <S.GoToChallengesList onClick={() => handleRouteChange('/')}>
-          <FaArrowLeft
-            size={20}
-            style={{ marginRight: '8px', marginBottom: '-1px' }}
-          />
-          <p>Challenges list</p>
-        </S.GoToChallengesList>
+        <S.BackButtonContainer onClick={() => handleRouteChange('/')}>
+          <S.BackIcon>
+            <FaArrowLeft />
+          </S.BackIcon>
+          <S.BackButton>Back to challenges list</S.BackButton>
+        </S.BackButtonContainer>
         <S.ChallengeDetails>
-          {challenge.day} - {challenge.title}
+          <S.ChallengeDay>{challenge.day}</S.ChallengeDay>
+          <S.ChallengeTitle>&nbsp;- {challenge.title}</S.ChallengeTitle>
         </S.ChallengeDetails>
       </S.Header>
-      <Suspense fallback={<div>Loading...</div>}>
-        <S.Square>
-          <S.Challenge>
-            <CurrentChallenge />
-          </S.Challenge>
-          <S.Code>
-            <CurrentCode />
-          </S.Code>
-        </S.Square>
-      </Suspense>
-      <S.ArrowButtons>
-        <S.BackButton
+      <S.Content>Content</S.Content>
+      <S.Footer>
+        <S.PreviousButton
           onClick={() => previousDay && handleRouteChange(`day-${previousDay}`)}
-          isDisabled={!previousDay}
+          disabled={!previousDay}
         >
-          <FaArrowLeft
-            size={16}
-            style={{ marginRight: '4px', marginBottom: '-2px' }}
-          />
-          <p>Previous challenge</p>
-        </S.BackButton>
-        &bull;
+          <FaArrowLeft />
+          <S.ControlText>Previous challenge</S.ControlText>
+        </S.PreviousButton>
+        &nbsp;|&nbsp;
         <S.NextButton
           onClick={() => nextDay && handleRouteChange(`day-${nextDay}`)}
-          isDisabled={!nextDay.length && nextDay !== '31'}
+          disabled={!nextDay.length && nextDay !== '31'}
         >
-          <p>Next challenge</p>
-          <FaArrowRight
-            size={16}
-            style={{ marginLeft: '4px', marginBottom: '-2px' }}
-          />
+          <S.ControlText>Next challenge</S.ControlText>
+          <FaArrowRight />
         </S.NextButton>
-      </S.ArrowButtons>
+      </S.Footer>
     </S.Container>
   );
 };

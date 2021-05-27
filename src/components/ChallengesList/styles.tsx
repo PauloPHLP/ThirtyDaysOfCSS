@@ -47,11 +47,7 @@ export const Container = styled.div`
     height: 65%;
   }
 
-  @media (min-width: 450px) and (max-width: 539px) {
-    height: 65%;
-  }
-
-  @media (min-width: 540px) and (max-width: 550px) {
+  @media (min-width: 540px) and (max-height: 720px) {
     height: 65%;
   }
 `;
