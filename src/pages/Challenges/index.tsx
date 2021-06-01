@@ -1,7 +1,8 @@
-import React, { Suspense, useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 
+import CodeContent from '../../components/CodeContent';
 import challengesList from '../../assets/challenges/challengesList.json';
 import * as S from './styles';
 
@@ -12,33 +13,12 @@ interface ChallengeProps {
   link: string;
 }
 
-// Loads challenges dinamically based on the current day.
-function loadChallenge(
-  challengeDay: string,
-  type: 'Challenge' | 'Code',
-): React.ElementType {
-  const Component = React.lazy(() =>
-    import(
-      `../../components/ChallengesDays/Day${challengeDay}/${type}`
-    ).catch(() => import(`../../components/ChallengeNotCompleted`)),
-  );
-
-  return Component;
-}
-
 const Challenges: React.FC = () => {
   const [newRoute, setNewRoute] = useState('');
   const [previousDay, setPreviousDay] = useState('');
   const [nextDay, setNextDay] = useState('');
   const [challenge, setChallenge] = useState({} as ChallengeProps);
-  const [CurrentChallenge, setCurrentChallenge] = useState<React.ElementType>(
-    () => {
-      return loadChallenge('01', 'Challenge');
-    },
-  );
-  const [CurrentCode, setCurrentCode] = useState<React.ElementType>(() => {
-    return loadChallenge('01', 'Code');
-  });
+  const [currentDay, setCurrentDay] = useState('01');
   const history = useHistory();
 
   // Adds a zero on the left on numbers minor than 10.
@@ -70,13 +50,10 @@ const Challenges: React.FC = () => {
 
     // Checking if the current day number is in the range of challenge days.
     if (Number(currentDayNumber) >= 1 && Number(currentDayNumber) <= 30) {
-      setCurrentChallenge(
-        loadChallenge(zeroPad(currentDayNumber), 'Challenge'),
-      );
-      setCurrentCode(loadChallenge(zeroPad(currentDayNumber), 'Code'));
       setChallenge(challengesList[Number(currentDayNumber) - 1]);
+      setCurrentDay(String(currentDayNumber));
     } else history.push('/');
-  }, [history, setNextAndPreviousRouteAvailability, zeroPad]);
+  }, [history, setNextAndPreviousRouteAvailability]);
 
   const handleRouteChange = useCallback(
     (path: string) => {
@@ -104,7 +81,9 @@ const Challenges: React.FC = () => {
           <S.ChallengeTitle>&nbsp;- {challenge.title}</S.ChallengeTitle>
         </S.ChallengeDetails>
       </S.Header>
-      <S.Content>Content</S.Content>
+
+      <CodeContent currentDay={currentDay} />
+
       <S.Footer>
         <S.PreviousButton
           onClick={() => previousDay && handleRouteChange(`day-${previousDay}`)}

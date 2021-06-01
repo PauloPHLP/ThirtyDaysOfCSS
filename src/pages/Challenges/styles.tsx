@@ -21,7 +21,6 @@ export const Header = styled.header`
   justify-content: space-between;
   height: 10vh;
   width: 100%;
-  border: 1px solid #0ff;
   padding: 0 2rem;
   font-size: 20px;
 `;
@@ -58,22 +57,12 @@ export const ChallengeTitle = styled.p`
   }
 `;
 
-export const Content = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  width: 100%;
-  border: 1px solid #f0f;
-`;
-
 export const Footer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
   width: 100%;
-  border: 1px solid #ff0;
 `;
 
 const ControlButtonsDefaults = styled.button<ILinkButton>`
