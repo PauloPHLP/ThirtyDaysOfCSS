@@ -7,23 +7,23 @@ export const Container = styled.div`
 `;
 
 export const InnerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   border: 1px solid #4a5079;
   border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
 `;
 
 export const Header = styled.header`
-  align-self: flex-start;
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 1.5rem 0;
 `;
 
 export const Social = styled.div``;
