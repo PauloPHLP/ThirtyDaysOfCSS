@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #282d4f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  overflow: hidden auto;
   width: 100%;
   height: 100%;
+  background-color: #282d4f;
   border-radius: 8px;
-  overflow: hidden auto;
-
-  /* display: flex;
-  flex-wrap: wrap; */
-  display: flex;
-  flex-wrap: wrap;
 `;
