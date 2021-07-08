@@ -30,7 +30,11 @@ export const Day = styled.h2`
   color: #ccd0e7;
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+  @media (max-width: 360px) {
+    font-size: 18px;
+  }
+`;
 
 export const Status = styled.h4<StatusProps>`
   color: ${props => (props.status ? '#7AD6A5' : '#E24C53')};
