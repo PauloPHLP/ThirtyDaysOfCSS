@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
+import LoadSpinner from '../LoadSpinner';
 
 import * as S from './styles';
 
@@ -6,16 +7,18 @@ interface CodeContentProps {
   currentDay: string;
 }
 
-// Loads challenges dinamically based on the current day.
 function LoadComponentDinamically(
   challengeDay: string,
   type: 'Challenge' | 'Code',
 ): React.ElementType {
-  const Component = React.lazy(() =>
-    import(
+  const Component = React.lazy(async () => {
+    // Adding a delay to show the spinner while loading the component.
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    return import(
       `../../components/ChallengesDays/Day${challengeDay}/${type}`
-    ).catch(() => import(`../../components/ChallengeNotCompleted`)),
-  );
+    ).catch(() => import(`../../components/ChallengeNotCompleted`));
+  });
 
   return Component;
 }
@@ -37,7 +40,7 @@ const CodeContent: React.FC<CodeContentProps> = ({ currentDay }) => {
 
   return (
     <S.Container>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadSpinner size={46} />}>
         <S.Challenge>
           <CurrentChallenge />
         </S.Challenge>
