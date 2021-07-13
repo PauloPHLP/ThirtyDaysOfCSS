@@ -21,6 +21,13 @@ const InternalContent = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
+
+  padding: 1rem;
+
+  @media (max-width: 1264px) {
+    height: 50%;
+    width: 100%;
+  }
 `;
 
 export const Challenge = styled(InternalContent)``;

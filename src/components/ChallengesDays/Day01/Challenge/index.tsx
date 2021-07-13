@@ -1,9 +1,54 @@
 import React from 'react';
 
-import * as S from './styles';
+import './styles.css';
 
 const Challenge: React.FC = () => {
-  return <S.Container>Day 01 Challenge</S.Container>;
+  return (
+    <div className="container-challenge">
+      <ul>
+        <li>
+          <div>
+            <span />
+            <span />
+            <span />
+            <span className="fa fa-facebook" aria-hidden="true" />
+          </div>
+        </li>
+        <li>
+          <div>
+            <span />
+            <span />
+            <span />
+            <span className="fa fa-twitter" aria-hidden="true" />
+          </div>
+        </li>
+        <li>
+          <div>
+            <span />
+            <span />
+            <span />
+            <span className="fa fa-google-plus" aria-hidden="true" />
+          </div>
+        </li>
+        <li>
+          <div>
+            <span />
+            <span />
+            <span />
+            <span className="fa fa-linkedin" aria-hidden="true" />
+          </div>
+        </li>
+        <li>
+          <div>
+            <span />
+            <span />
+            <span />
+            <span className="fa fa-instagram" aria-hidden="true" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default Challenge;
