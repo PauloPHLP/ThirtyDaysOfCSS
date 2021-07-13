@@ -32,6 +32,8 @@ export const SocialLink = styled.a`
   font-size: 20px;
   text-decoration: none;
   margin: 0 5px;
+  color: #989db8;
+  text-decoration: none;
 
   &:visited {
     color: #989db8;
