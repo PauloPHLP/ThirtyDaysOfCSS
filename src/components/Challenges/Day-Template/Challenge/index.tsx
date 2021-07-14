@@ -1,9 +1,9 @@
 import React from 'react';
 
-import * as S from './styles';
+import './styles.css';
 
 const Challenge: React.FC = () => {
-  return <S.Container>Day 02 Challenge</S.Container>;
+  return <div className="container-challenge">Day Template</div>;
 };
 
 export default Challenge;

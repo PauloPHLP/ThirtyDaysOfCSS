@@ -1,9 +1,4 @@
-import React from 'react';
-import { CopyBlock, dracula } from 'react-code-blocks';
-
-import './styles.css';
-
-const CSS_CODE = `/* Default style for all challenges containers. */
+/* Default style for all challenges containers. */
 .container-challenge {
   height: 100%;
   display: flex;
@@ -57,7 +52,7 @@ ul li:hover span:nth-child(3) {
 
 ul li:hover span:nth-child(4) {
   transform: translate(30px, -30px);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 li {
@@ -100,20 +95,3 @@ ul li:nth-child(5) span {
     overflow: auto;
   }
 }
-`;
-
-const Code: React.FC = () => {
-  return (
-    <div className="container-code">
-      <CopyBlock
-        text={CSS_CODE}
-        language="css"
-        showLineNumbers={false}
-        theme={dracula}
-        onCopy={false}
-      />
-    </div>
-  );
-};
-
-export default Code;

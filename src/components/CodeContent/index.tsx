@@ -16,7 +16,7 @@ function LoadComponentDinamically(
     await new Promise(resolve => setTimeout(resolve, 500));
 
     return import(
-      `../../components/ChallengesDays/Day${challengeDay}/${type}`
+      `../../components/Challenges/Day${challengeDay}/${type}`
     ).catch(() => import(`../../components/ChallengeNotCompleted`));
   });
 
