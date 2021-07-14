@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
 
-  /* Override for this component */
+  /* Overridden for this component */
   overflow: hidden;
   justify-content: center;
 }

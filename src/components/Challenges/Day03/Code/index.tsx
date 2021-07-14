@@ -11,31 +11,58 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   align-items: center;
 
   /* Overridden for this component */
-  overflow: hidden;
-  justify-content: center;
+  width: 100%;
 }
 
-.ring {
+section {
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 200px;
-  width: 200px;
-  border-top: 4px solid #e4405f;
-  border-radius: 50%;
-  -webkit-animation: spin 1s infinite linear;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
 }
 
-.loading {
+.background {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.background.left {
+  background-color: #55acee;
+}
+
+.background.left .text {
+  left: 100%;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.background.right {
+  background-color: #dd4b39;
+}
+
+.text {
   position: absolute;
+  white-space: nowrap;
+  font-size: 10em;
+  line-height: 100%;
+
+  animation: spinner 10s linear infinite;
 }
 
-@keyframes spin {
+@keyframes spinner {
   from {
-    transform: rotate(0deg);
+    transform: translate(50%);
   }
   to {
-    transform: rotate(360deg);
+    transform: translate(-150%);
   }
 }
 `;
