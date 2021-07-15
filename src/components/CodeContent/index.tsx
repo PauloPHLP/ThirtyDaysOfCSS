@@ -13,7 +13,7 @@ function LoadComponentDinamically(
 ): React.ElementType {
   const Component = React.lazy(async () => {
     // Adding a delay to show the spinner while loading the component.
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 200));
 
     return import(
       `../../components/Challenges/Day${challengeDay}/${type}`

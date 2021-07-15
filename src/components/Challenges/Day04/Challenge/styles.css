@@ -27,7 +27,7 @@
   position: absolute;
   background-color: #dd4b39;
   transform: skewX(-50deg);
-  transition: 0.2s linear;
+  transition: 0.4s linear;
 }
 
 .animated-button::before {

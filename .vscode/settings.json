@@ -5,7 +5,7 @@
   "workbench.startupEditor": "newUntitledFile",
 
   "polacode.backgroundColor": "#6633CC",
-  
+
   "editor.tabSize": 2,
   "editor.fontSize": 14,
   "editor.lineHeight": 26,
@@ -22,9 +22,9 @@
   "editor.parameterHints.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  
+
   "editor.rulers": [80, 120],
-  
+
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -34,7 +34,7 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
-    "**/.DS_Store": true,
+    "**/.DS_Store": true
     // "**/node_modules": true
   },
 
@@ -53,14 +53,13 @@
   "emmet.syntaxProfiles": { "javascript": "jsx" },
   "emmet.includeLanguages": { "javascript": "javascriptreact" },
 
-  
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.enabled": false,
 
   "git.enableSmartCommit": true,
   "terminal.integrated.shell.osx": "/bin/zsh",
-  "liveshare.featureSet": "insiders", 
+  "liveshare.featureSet": "insiders",
 
   "typescript.tsserver.log": "off",
   "javascript.suggest.autoImports": true,
