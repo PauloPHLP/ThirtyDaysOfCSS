@@ -4,7 +4,7 @@ import { CopyBlock, dracula } from 'react-code-blocks';
 import './styles.css';
 
 const CSS_CODE = `/* Default style for all challenges containers. */
-.container-challenge {
+.challenge-container {
   height: 100%;
   display: flex;
   flex-direction: row;

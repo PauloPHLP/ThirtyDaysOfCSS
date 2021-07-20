@@ -4,7 +4,7 @@ import './styles.css';
 
 const Challenge: React.FC = () => {
   return (
-    <div className="container-challenge">
+    <div className="challenge-container">
       <div className="lighthing-text">
         <div className="group-01">
           <span className="letter">T</span>

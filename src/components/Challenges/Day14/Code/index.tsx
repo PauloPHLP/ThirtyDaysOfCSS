@@ -11,29 +11,23 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   align-items: center;
 }
 
-h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.challenge-container h1 {
+  text-transform: uppercase;
   text-align: center;
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
+  color: transparent;
+  background-image: url('./background.png');
+  background-clip: text;
+  background-color: white;
+  animation: text-animation 5s linear infinite;
 }
 
-h1 span:before {
-  content: '';
-  animation: change-icon 1.5s linear infinite;
-}
-
-@keyframes change-icon {
+@keyframes text-animation {
   0% {
-    content: '💻';
+    background-position: 0 0;
   }
-  50% {
-    content: '🍕';
-  }
+
   100% {
-    content: '🎮';
+    background-position: 100% 100%;
   }
 }
 `;

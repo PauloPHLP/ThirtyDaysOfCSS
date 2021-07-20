@@ -1,21 +1,21 @@
 /* Default style for all challenges containers. */
-.container-challenge {
+.challenge-container {
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.container-challenge h1 {
+.challenge-container h1 {
   color: rgba(85, 172, 238, 0.5);
   position: relative;
 }
 
-.container-challenge h1:hover {
+.challenge-container h1:hover {
   cursor: pointer;
 }
 
-.container-challenge h1::before {
+.challenge-container h1::before {
   content: '#ThirtyDaysOfCSS';
   width: 0%;
   height: 100%;
@@ -25,6 +25,6 @@
   transition: all 0.3s linear;
 }
 
-.container-challenge h1:hover::before {
+.challenge-container h1:hover::before {
   width: 100%;
 }

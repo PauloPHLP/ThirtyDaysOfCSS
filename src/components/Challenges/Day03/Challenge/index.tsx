@@ -4,7 +4,7 @@ import './styles.css';
 
 const Challenge: React.FC = () => {
   return (
-    <div className="container-challenge">
+    <div className="challenge-container">
       <section>
         <div className="background left">
           <span className="text">Thirty Days of CSS</span>
