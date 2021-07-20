@@ -1,0 +1,63 @@
+import React from 'react';
+import { CopyBlock, dracula } from 'react-code-blocks';
+
+import './styles.css';
+
+const CSS_CODE = `/* Default style for all challenges containers. */
+.container-challenge {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.challenge-11-button {
+  height: 4rem;
+  width: 15rem;
+  background-color: transparent;
+  position: relative;
+  color: #dd4b39;
+  border: 1px solid #dd4b39;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.challenge-11-button:hover {
+  color: #ffffff;
+  border: 1px solid #55acee;
+}
+
+.challenge-11-button::before {
+  content: '';
+  height: 0%;
+  width: 100%;
+  background-color: #55acee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+  transition: all 0.2s linear;
+}
+
+.challenge-11-button:hover::before {
+  height: 200%;
+}
+`;
+
+const Code: React.FC = () => {
+  return (
+    <div className="container-code">
+      <CopyBlock
+        text={CSS_CODE}
+        language="css"
+        showLineNumbers={false}
+        theme={dracula}
+        onCopy={false}
+      />
+    </div>
+  );
+};
+
+export default Code;
