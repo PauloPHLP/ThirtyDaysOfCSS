@@ -6,16 +6,16 @@
   align-items: center;
 }
 
-.challenge-container h1 {
+.challenge-container .challenge-12-h1 {
   color: rgba(85, 172, 238, 0.5);
   position: relative;
 }
 
-.challenge-container h1:hover {
+.challenge-container .challenge-12-h1:hover {
   cursor: pointer;
 }
 
-.challenge-container h1::before {
+.challenge-container .challenge-12-h1::before {
   content: '#ThirtyDaysOfCSS';
   width: 0%;
   height: 100%;
@@ -25,6 +25,6 @@
   transition: all 0.3s linear;
 }
 
-.challenge-container h1:hover::before {
+.challenge-container .challenge-12-h1:hover::before {
   width: 100%;
 }

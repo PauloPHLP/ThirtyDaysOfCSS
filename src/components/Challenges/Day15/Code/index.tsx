@@ -7,33 +7,29 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  /* Overridden for this component */
-  overflow: hidden;
-  justify-content: center;
 }
 
-.ring {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  width: 200px;
-  border-top: 4px solid #e4405f;
-  border-radius: 50%;
-  -webkit-animation: spin 1s infinite linear;
+.challenge-15-span {
+  all: unset;
 }
 
-.loading {
-  position: absolute;
+.challenge-15-span {
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 8px rgba(85, 172, 238, 0.5);
+  color: #55acee;
+  animation: twist-text 2s linear infinite;
+  animation-direction: alternate;
 }
 
-@keyframes spin {
+@keyframes twist-text {
   from {
-    transform: rotate(0deg);
+    transform: rotate(5deg);
   }
+
   to {
-    transform: rotate(360deg);
+    transform: rotate(-5deg);
   }
 }
 `;

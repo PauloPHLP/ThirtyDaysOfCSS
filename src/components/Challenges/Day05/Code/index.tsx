@@ -1,8 +1,6 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-import './styles.css';
-
 const CSS_CODE = `/* Default style for all challenges containers. */
 .challenge-container {
   height: 100%;

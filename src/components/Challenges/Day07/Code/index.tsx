@@ -1,8 +1,6 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-import './styles.css';
-
 const CSS_CODE = `/* Default style for all challenges containers. */
 .challenge-container {
   height: 100%;
@@ -22,7 +20,7 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   justify-content: center;
 }
 
-.squares span {
+.squares .challenge-07-span {
   height: 2rem;
   width: 2rem;
   position: absolute;
@@ -32,17 +30,17 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   animation: spin 2s linear infinite;
 }
 
-.squares span:nth-child(1) {
+.squares .challenge-07-span:nth-child(1) {
   background-color: #ffffff;
   animation-delay: 0.7s;
 }
 
-.squares span:nth-child(2) {
+.squares .challenge-07-span:nth-child(2) {
   background-color: #55acee;
   animation-delay: 1.4s;
 }
 
-.squares span:nth-child(3) {
+.squares .challenge-07-span:nth-child(3) {
   background-color: #dd4b39;
 }
 

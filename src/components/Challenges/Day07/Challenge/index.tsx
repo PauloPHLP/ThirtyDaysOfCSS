@@ -6,9 +6,9 @@ const Challenge: React.FC = () => {
   return (
     <div className="challenge-container">
       <div className="squares">
-        <span />
-        <span />
-        <span />
+        <span className="challenge-07-span" />
+        <span className="challenge-07-span" />
+        <span className="challenge-07-span" />
       </div>
     </div>
   );

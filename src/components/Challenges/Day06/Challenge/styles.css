@@ -20,63 +20,63 @@
   animation: lightining 2s linear infinite;
 }
 
-div.group-01 span:nth-child(1) {
+.group-01 .letter:nth-child(1) {
   animation-delay: 0;
 }
 
-div.group-01 span:nth-child(2) {
+.group-01 .letter:nth-child(2) {
   animation-delay: 0.1s;
 }
 
-div.group-01 span:nth-child(3) {
+.group-01 .letter:nth-child(3) {
   animation-delay: 0.2s;
 }
 
-div.group-01 span:nth-child(4) {
+.group-01 .letter:nth-child(4) {
   animation-delay: 0.3s;
 }
 
-div.group-01 span:nth-child(5) {
+.group-01 .letter:nth-child(5) {
   animation-delay: 0.4s;
 }
 
-div.group-01 span:nth-child(6) {
+.group-01 .letter:nth-child(6) {
   animation-delay: 0.5s;
 }
 
-div.group-02 span:nth-child(1) {
+.group-02 .letter:nth-child(1) {
   animation-delay: 0.6s;
 }
 
-div.group-02 span:nth-child(2) {
+.group-02 .letter:nth-child(2) {
   animation-delay: 0.7s;
 }
 
-div.group-02 span:nth-child(3) {
+.group-02 .letter:nth-child(3) {
   animation-delay: 0.8s;
 }
 
-div.group-02 span:nth-child(4) {
+.group-02 .letter:nth-child(4) {
   animation-delay: 0.9s;
 }
 
-div.group-03 span:nth-child(1) {
+.group-03 .letter:nth-child(1) {
   animation-delay: 1s;
 }
 
-div.group-03 span:nth-child(2) {
+.group-03 .letter:nth-child(2) {
   animation-delay: 1.1s;
 }
 
-div.group-04 span:nth-child(1) {
+.group-04 .letter:nth-child(1) {
   animation-delay: 1.2s;
 }
 
-div.group-04 span:nth-child(2) {
+.group-04 .letter:nth-child(2) {
   animation-delay: 1.3s;
 }
 
-div.group-04 span:nth-child(3) {
+.group-04 .letter:nth-child(3) {
   animation-delay: 1.4s;
 }
 

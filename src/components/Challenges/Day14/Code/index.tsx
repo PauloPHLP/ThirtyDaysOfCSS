@@ -1,8 +1,6 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-import './styles.css';
-
 const CSS_CODE = `/* Default style for all challenges containers. */
 .challenge-container {
   height: 100%;
@@ -11,7 +9,7 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   align-items: center;
 }
 
-.challenge-container h1 {
+.challenge-container .challenge-14-h1 {
   text-transform: uppercase;
   text-align: center;
   color: transparent;

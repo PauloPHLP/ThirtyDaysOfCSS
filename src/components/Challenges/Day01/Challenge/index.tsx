@@ -5,45 +5,60 @@ import './styles.css';
 const Challenge: React.FC = () => {
   return (
     <div className="challenge-container">
-      <ul>
-        <li>
-          <div>
-            <span />
-            <span />
-            <span />
-            <span className="fa fa-facebook" aria-hidden="true" />
+      <ul className="challenge-01-ul">
+        <li className="challenge-01-li">
+          <div className="challenge-01-div">
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span
+              className="challenge-01-span fa fa-facebook"
+              aria-hidden="true"
+            />
           </div>
         </li>
-        <li>
-          <div>
-            <span />
-            <span />
-            <span />
-            <span className="fa fa-twitter" aria-hidden="true" />
+        <li className="challenge-01-li">
+          <div className="challenge-01-div">
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span
+              className="challenge-01-span fa fa-twitter"
+              aria-hidden="true"
+            />
           </div>
         </li>
-        <li>
-          <div>
-            <span />
-            <span />
-            <span />
-            <span className="fa fa-google-plus" aria-hidden="true" />
+        <li className="challenge-01-li">
+          <div className="challenge-01-div">
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span
+              className="challenge-01-span fa fa-google-plus"
+              aria-hidden="true"
+            />
           </div>
         </li>
-        <li>
-          <div>
-            <span />
-            <span />
-            <span />
-            <span className="fa fa-linkedin" aria-hidden="true" />
+        <li className="challenge-01-li">
+          <div className="challenge-01-div">
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span
+              className="challenge-01-span fa fa-linkedin"
+              aria-hidden="true"
+            />
           </div>
         </li>
-        <li>
-          <div>
-            <span />
-            <span />
-            <span />
-            <span className="fa fa-instagram" aria-hidden="true" />
+        <li className="challenge-01-li">
+          <div className="challenge-01-div">
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span className="challenge-01-span" />
+            <span
+              className="challenge-01-span fa fa-instagram"
+              aria-hidden="true"
+            />
           </div>
         </li>
       </ul>

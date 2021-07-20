@@ -1,8 +1,6 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-import './styles.css';
-
 const CSS_CODE = `/* Default style for all challenges containers. */
 .challenge-container {
   height: 100%;
@@ -11,7 +9,7 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   align-items: center;
 }
 
-h1 {
+.challenge-10-h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +18,7 @@ h1 {
   text-align: center;
 }
 
-h1 span:before {
+.challenge-10-h1 .challenge-10-span:before {
   content: '';
   animation: change-icon 1.5s linear infinite;
 }

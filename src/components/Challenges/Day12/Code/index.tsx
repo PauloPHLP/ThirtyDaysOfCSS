@@ -1,8 +1,6 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-import './styles.css';
-
 const CSS_CODE = `/* Default style for all challenges containers. */
 .challenge-container {
   height: 100%;
@@ -11,17 +9,16 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   align-items: center;
 }
 
-.challenge-container span {
-  font-size: 40px;
+.challenge-container .challenge-12-h1 {
   color: rgba(85, 172, 238, 0.5);
   position: relative;
 }
 
-.challenge-container span:hover {
+.challenge-container .challenge-12-h1:hover {
   cursor: pointer;
 }
 
-.challenge-container span::before {
+.challenge-container .challenge-12-h1::before {
   content: '#ThirtyDaysOfCSS';
   width: 0%;
   height: 100%;
@@ -31,7 +28,7 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   transition: all 0.3s linear;
 }
 
-.challenge-container span:hover::before {
+.challenge-container .challenge-12-h1:hover::before {
   width: 100%;
 }
 `;

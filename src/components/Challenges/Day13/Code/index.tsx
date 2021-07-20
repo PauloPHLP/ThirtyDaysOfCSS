@@ -1,8 +1,6 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-import './styles.css';
-
 const CSS_CODE = `/* Default style for all challenges containers. */
 .challenge-container {
   height: 100%;
@@ -14,35 +12,35 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   overflow: hidden;
 }
 
-.challenge-13-ul li {
+.challenge-13-ul .challenge-13-li {
   all: unset;
 }
 
-.challenge-13-ul li {
+.challenge-13-ul .challenge-13-li {
   font-size: 40px;
   letter-spacing: 15px;
   animation: loading 3s linear infinite;
 }
 
-.challenge-13-ul li:nth-child(1) {
+.challenge-13-ul .challenge-13-li:nth-child(1) {
   animation-delay: 0s;
 }
-.challenge-13-ul li:nth-child(2) {
+.challenge-13-ul .challenge-13-li:nth-child(2) {
   animation-delay: 0.2s;
 }
-.challenge-13-ul li:nth-child(3) {
+.challenge-13-ul .challenge-13-li:nth-child(3) {
   animation-delay: 0.4s;
 }
-.challenge-13-ul li:nth-child(4) {
+.challenge-13-ul .challenge-13-li:nth-child(4) {
   animation-delay: 0.6s;
 }
-.challenge-13-ul li:nth-child(5) {
+.challenge-13-ul .challenge-13-li:nth-child(5) {
   animation-delay: 0.8s;
 }
-.challenge-13-ul li:nth-child(6) {
+.challenge-13-ul .challenge-13-li:nth-child(6) {
   animation-delay: 1s;
 }
-.challenge-13-ul li:nth-child(7) {
+.challenge-13-ul .challenge-13-li:nth-child(7) {
   animation-delay: 1.2s;
 }
 

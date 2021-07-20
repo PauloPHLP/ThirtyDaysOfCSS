@@ -48,4 +48,15 @@ export default createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background: #a592f2;
   }
+
+  .container-code {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    border-radius: 1rem;
+  }
+
+  .container-code div {
+    padding: 1rem;
+  }
 `;

@@ -5,7 +5,7 @@ import './styles.css';
 const Challenge: React.FC = () => {
   return (
     <div className="challenge-container">
-      <h1>Thirty Days Of CSS</h1>
+      <h1 className="challenge-14-h1">Thirty Days Of CSS</h1>
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-import './styles.css';
-
 const CSS_CODE = `/* Default style for all challenges containers. */
 .challenge-container {
   height: 100%;
@@ -25,7 +23,7 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   background-color: #55acee;
 }
 
-.pendulum span {
+.pendulum .challenge-09-span {
   height: 250px;
   width: 10px;
   position: relative;
@@ -34,7 +32,7 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   margin: 10px 29px;
 }
 
-.pendulum span:before {
+.pendulum .challenge-09-span:before {
   content: '';
   height: 50px;
   width: 50px;
@@ -42,14 +40,14 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   bottom: 0;
   border-radius: 50%;
   background-color: #dd4b39;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
 }
 
-.pendulum span:first-child {
+.pendulum .challenge-09-span:first-child {
   animation: lift-left-arm 2s ease-in infinite;
 }
 
-.pendulum span:last-child {
+.pendulum .challenge-09-span:last-child {
   animation: lift-right-arm 2s ease-in infinite 1s;
 }
 
@@ -60,13 +58,13 @@ const CSS_CODE = `/* Default style for all challenges containers. */
     top: 20%;
   }
 
-  .pendulum span {
+  .pendulum .challenge-09-span {
     height: 150px;
     width: 5px;
     margin: 10px 20px;
   }
 
-  .pendulum span:before {
+  .pendulum .challenge-09-span:before {
     height: 25px;
     width: 25px;
     bottom: -4px;
