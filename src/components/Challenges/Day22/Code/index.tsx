@@ -1,7 +1,94 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-const CSS_CODE = ``;
+const CSS_CODE = `/* Default style for all challenges containers. */
+.challenge-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* Overridden for this component */
+  width: 100%;
+  justify-content: center;
+}
+
+.challenge-22-ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.challenge-22-li {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+.challenge-22-li::before {
+  content: '';
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.challenge-22-li:hover::before {
+  opacity: 1;
+}
+
+.challenge-22-i::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: 2px dotted #ffffff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.challenge-22-i {
+  font-size: 30px;
+  color: #ffffff;
+  transition: all 1s;
+}
+
+.challenge-22-i:hover {
+  color: #0f1228;
+}
+
+.challenge-22-i:hover::after {
+  opacity: 1;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0.85) rotate(0deg);
+  }
+
+  100% {
+    transform: scale(0.85) rotate(360deg);
+  }
+}
+`;
 
 const Code: React.FC = () => {
   return (
