@@ -1,0 +1,7 @@
+/* Default style for all challenges containers. */
+.challenge-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
