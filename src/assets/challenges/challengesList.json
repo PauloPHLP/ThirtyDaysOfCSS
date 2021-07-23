@@ -153,30 +153,30 @@
     "day": "Day 26",
     "title": "Animation on loader.",
     "link": "day-26",
-    "isFinished": false
+    "isFinished": true
   },
   {
     "day": "Day 27",
     "title": "Pulse effect on lines.",
     "link": "day-27",
-    "isFinished": false
+    "isFinished": true
   },
   {
     "day": "Day 28",
     "title": "Background color change.",
     "link": "day-28",
-    "isFinished": false
+    "isFinished": true
   },
   {
     "day": "Day 29",
     "title": "Responsive search bar.",
     "link": "day-29",
-    "isFinished": false
+    "isFinished": true
   },
   {
     "day": "Day 30",
     "title": "Fireworks.",
     "link": "day-30",
-    "isFinished": false
+    "isFinished": true
   }
 ]
