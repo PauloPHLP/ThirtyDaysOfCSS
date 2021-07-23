@@ -8,6 +8,7 @@ const CSS_CODE = `/* Default style for all challenges containers. */
   flex-direction: row;
   align-items: center;
 
+  /* Overridden for this component */
   overflow: hidden;
 }
 

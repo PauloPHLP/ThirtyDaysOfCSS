@@ -1,7 +1,65 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-const CSS_CODE = ``;
+const CSS_CODE = `/* Default style for all challenges containers. */
+.challenge-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* Overridden for this component */
+  width: 100%;
+  justify-content: center;  
+  overflow: hidden;
+}
+
+.pulse-lines {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #dd4b39;
+  font-size: 48px;
+  font-weight: 600;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.pulse-lines::before,
+.pulse-lines::after {
+  content: '';
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  border: 1px solid #dd4b39;
+  animation: pulsate 2s linear infinite;
+}
+
+.pulse-lines::after {
+  animation-delay: 0.5s;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+`;
 
 const Code: React.FC = () => {
   return (
