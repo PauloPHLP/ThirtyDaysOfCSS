@@ -4,4 +4,32 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  /* Overridden for this component */
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #55acee;
+  font-size: 48px;
+  text-align: center;
+  animation: change-colors 5s linear infinite;
+}
+
+@keyframes change-colors {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
