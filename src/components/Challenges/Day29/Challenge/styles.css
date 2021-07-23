@@ -4,4 +4,78 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  /* Overridden for this component */
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.challenge-29-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #282a36;
+  overflow: auto;
+}
+
+.navbar {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #1c1d27;
+  line-height: 40px;
+  position: relative;
+}
+
+.challenge-29-a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  line-height: 40px;
+  clear: right;
+}
+
+.challenge-29-a span {
+  color: #dd4b39;
+}
+
+.challenge-29-toggle {
+  display: none;
+  float: right;
+}
+
+.challenge-29-label {
+  position: absolute;
+  float: right;
+  margin: 0 15px;
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .challenge-29-label {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 280px;
+  }
+
+  .challenge-29-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid rgb(49, 50, 65);
+  }
+
+  .challenge-29-toggle:checked + .menu {
+    display: block;
+  }
 }
