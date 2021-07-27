@@ -10,7 +10,10 @@ const Dashboard: React.FC = () => {
       <S.InnerContainer>
         <S.Header>
           <S.Social>
-            <S.SocialLink href="https://github.com/PauloPHLP" target="_blank">
+            <S.SocialLink
+              href="https://github.com/PauloPHLP/ThirtyDaysOfCSS"
+              target="_blank"
+            >
               <FaGithub size={16} style={{ marginRight: '2px' }} />
               <span> GitHub</span>
             </S.SocialLink>
