@@ -15,7 +15,7 @@ Thirty days of CSS is a challenge that aims to help you improve your coding skil
 
 ## ✨️ See live
 
-If you want to take a look at the challenges and see my solutions checkout <a href="https://paulophlp.github.io/portfolio/">this link</a>.
+If you want to take a look at the challenges and see my solutions checkout this **<a href="https://paulophlp.github.io/portfolio/">link</a>**.
 
 ## 🔥️ Face this challenge
 
