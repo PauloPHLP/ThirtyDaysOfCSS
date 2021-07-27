@@ -19,7 +19,7 @@ If you want to take a look at the challenges and see my solutions checkout this 
 
 ## 🔥️ Face this challenge
 
-If you also want to face this challenge take a look at this **<a href="https://github.com/PauloPHLP/React.js-ThirtyDaysOfCSSTemplate">link</a>**. This is for a repository contains a copy of this project and you can use it as a template to solve everything by yourself. All the instructions are available there, so fell free to take a look on it!
+If you also want to face this challenge take a look at this **<a href="https://github.com/PauloPHLP/React.js-ThirtyDaysOfCSSTemplate">link</a>**. This is for a repository that contains a copy of this project and you can use it as a template to solve everything by yourself. All the instructions are available there, so fell free to take a look on it!
 
 ## 🚀️ Technologies
 
