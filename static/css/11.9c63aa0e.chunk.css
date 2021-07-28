@@ -1,0 +1,2 @@
+.challenge-container{height:100%;display:flex;flex-direction:row;align-items:center}.challenge-10-h1{display:flex;align-items:center;justify-content:center;font-family:"Press Start 2P",cursive;text-align:center}.challenge-10-h1 .challenge-10-span:before{content:"";-webkit-animation:change-icon 1.5s linear infinite;animation:change-icon 1.5s linear infinite}@-webkit-keyframes change-icon{0%{content:"💻"}50%{content:"🍕"}to{content:"🎮"}}@keyframes change-icon{0%{content:"💻"}50%{content:"🍕"}to{content:"🎮"}}
+/*# sourceMappingURL=11.9c63aa0e.chunk.css.map */

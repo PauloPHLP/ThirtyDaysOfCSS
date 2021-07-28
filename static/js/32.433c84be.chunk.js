@@ -1,0 +1,2 @@
+(this.webpackJsonpthirtydaysofcss=this.webpackJsonpthirtydaysofcss||[]).push([[32],{14:function(e,t,s){"use strict";s.r(t);var a=s(0),n=s.n(a),c=s(133);t.default=function(){return n.a.createElement("div",{className:"container-code"},n.a.createElement(c.a,{text:"",language:"css",showLineNumbers:!1,theme:c.b,onCopy:!1}))}}}]);
+//# sourceMappingURL=32.433c84be.chunk.js.map

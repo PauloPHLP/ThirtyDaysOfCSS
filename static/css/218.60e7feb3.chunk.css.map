@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.css"],"names":[],"mappings":"AACA,qBACE,WAAY,CACZ,YAAa,CACb,kBAAmB,CACnB,kBACF","file":"218.60e7feb3.chunk.css","sourcesContent":["/* Default style for all challenges containers. */\n.challenge-container {\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n"]}

@@ -1,0 +1,2 @@
+(this.webpackJsonpthirtydaysofcss=this.webpackJsonpthirtydaysofcss||[]).push([[17,234],{117:function(t,e,n){},45:function(t,e,n){"use strict";n.r(e);var a=n(0),s=n.n(a);n(117);e.default=function(){return s.a.createElement("div",{className:"challenge-container"},s.a.createElement("button",{type:"button",className:"challenge-16-button"},"Thirty Days Of CSS"))}}}]);
+//# sourceMappingURL=17.a3ebb611.chunk.js.map

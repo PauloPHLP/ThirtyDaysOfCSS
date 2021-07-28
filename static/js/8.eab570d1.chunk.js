@@ -1,0 +1,2 @@
+(this.webpackJsonpthirtydaysofcss=this.webpackJsonpthirtydaysofcss||[]).push([[8,225],{108:function(e,a,s){},27:function(e,a,s){"use strict";s.r(a);var n=s(0),t=s.n(n);s(108);a.default=function(){return t.a.createElement("div",{className:"challenge-container"},t.a.createElement("div",{className:"squares"},t.a.createElement("span",{className:"challenge-07-span"}),t.a.createElement("span",{className:"challenge-07-span"}),t.a.createElement("span",{className:"challenge-07-span"})))}}}]);
+//# sourceMappingURL=8.eab570d1.chunk.js.map

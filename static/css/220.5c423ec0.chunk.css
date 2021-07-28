@@ -1,0 +1,2 @@
+.challenge-container{height:100%;flex-direction:row;overflow:hidden}.challenge-container,.ring{display:flex;align-items:center;justify-content:center}.ring{height:200px;width:200px;border-top:4px solid #e4405f;border-radius:50%;-webkit-animation:spin 1s linear infinite}.loading{position:absolute}@-webkit-keyframes spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}@keyframes spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}
+/*# sourceMappingURL=220.5c423ec0.chunk.css.map */

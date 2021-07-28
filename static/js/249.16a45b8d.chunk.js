@@ -1,0 +1,2 @@
+(this.webpackJsonpthirtydaysofcss=this.webpackJsonpthirtydaysofcss||[]).push([[249],{335:function(n,t,e){"use strict";e.r(t);var r=e(0),s=e.n(r),a=e(1);function i(){var n=Object(a.a)(["\n  text-align: center;\n  padding: 1rem;\n"]);return i=function(){return n},n}var c=e(2).b.div(i());t.default=function(){return s.a.createElement(c,null,"This challenge is still a work in progress... Come back in a few days =)")}}}]);
+//# sourceMappingURL=249.16a45b8d.chunk.js.map
