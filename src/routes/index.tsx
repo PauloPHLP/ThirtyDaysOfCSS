@@ -7,7 +7,7 @@ import Challenges from '../pages/Challenges';
 const Routes: React.FC = () => (
   <Switch>
     {/* Base routes. */}
-    <Route path="/" exact component={Dashboard} />
+    <Route path="/ThirtyDaysOfCSS" exact component={Dashboard} />
 
     {/* Challenges routes. */}
     <Route path="/challenges/:day" component={Challenges} />

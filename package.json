@@ -27,7 +27,7 @@
     "test:coverage": "react-scripts test --coverage --watchAll false",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "jest": {
     "collectCoverageFrom": [
