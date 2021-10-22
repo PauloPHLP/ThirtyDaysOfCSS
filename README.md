@@ -11,7 +11,7 @@ Thirty days of CSS is a challenge that aims to help you improve your coding skil
 ## 👀️ Rules
 
 - Finish one challenge a day.
-- Share your progress on social media (Twitter, Facebook, Linkedin etc.) using the hashtag #30DaysOfCSS
+- Share your progress on social media (Twitter, Facebook, LinkedIn etc.) using the hashtag #30DaysOfCSS
 
 ## ✨️ See live
 
